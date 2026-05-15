@@ -1,0 +1,6 @@
+# common junk files
+.DS_Store
+Thumbs.db
+
+# VS Code
+.vscode/
