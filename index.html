@@ -3,40 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculator</title>
+    <title>Cat Calculator</title>
     <link rel="stylesheet" href="style.css">
-     <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-  />
-    
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-        <div id="calculator">
-            <input id="display" readonly>
-            <div id="keys">
-                <button onclick="appendToDisplay('+')" class="operator-btn">+</button>
-                <button onclick="appendToDisplay('7')">7</button>
-                <button onclick="appendToDisplay('8')">8</button>
-                <button onclick="appendToDisplay('9')">9</button>
-                <button onclick="appendToDisplay('-')" class="operator-btn">-</button>
-                <button onclick="appendToDisplay('4')">4</button>
-                <button onclick="appendToDisplay('5')">5</button>
-                <button onclick="appendToDisplay('6')">6</button>
-                <button onclick="appendToDisplay('*')" class="operator-btn">*</button>
-                <button onclick="appendToDisplay('1')">1</button>
-                <button onclick="appendToDisplay('2')">2</button>
-                <button onclick="appendToDisplay('3')">3</button>
-                <button onclick="appendToDisplay('/')" class="operator-btn">/</button>
-                <button onclick="appendToDisplay('0')">0</button>
-                <button onclick="appendToDisplay('.')">.</button>
-                <button onclick="calculate()">=</button>
-                <button onclick="clearDisplay()" class="operator-btn">C</button>
-                
+    <div class="bg-paws" aria-hidden="true"></div>
 
-            </div>
+    <main id="calculator" aria-label="Cat Calculator">
+        <div class="ear ear-left" aria-hidden="true"></div>
+        <div class="ear ear-right" aria-hidden="true"></div>
 
+        <section class="face" aria-hidden="true">
+            <span class="eye eye-left"></span>
+            <span class="eye eye-right"></span>
+            <span class="nose"></span>
+            <span class="whisker whisker-left-1"></span>
+            <span class="whisker whisker-left-2"></span>
+            <span class="whisker whisker-right-1"></span>
+            <span class="whisker whisker-right-2"></span>
+        </section>
+
+        <div class="display-wrap">
+            <span class="paw-print paw-tl" aria-hidden="true"></span>
+            <span class="paw-print paw-br" aria-hidden="true"></span>
+            <input id="display" readonly aria-label="Calculator display">
         </div>
-        <script src="index.js"></script>
-    </body>
-</html>     
+
+        <div id="keys">
+            <button onclick="appendToDisplay('+')" class="operator-btn">+</button>
+            <button onclick="appendToDisplay('7')"><span class="digit">7</span></button>
+            <button onclick="appendToDisplay('8')"><span class="digit">8</span></button>
+            <button onclick="appendToDisplay('9')"><span class="digit">9</span></button>
+            <button onclick="appendToDisplay('-')" class="operator-btn">-</button>
+            <button onclick="appendToDisplay('4')"><span class="digit">4</span></button>
+            <button onclick="appendToDisplay('5')"><span class="digit">5</span></button>
+            <button onclick="appendToDisplay('6')"><span class="digit">6</span></button>
+            <button onclick="appendToDisplay('*')" class="operator-btn">*</button>
+            <button onclick="appendToDisplay('1')"><span class="digit">1</span></button>
+            <button onclick="appendToDisplay('2')"><span class="digit">2</span></button>
+            <button onclick="appendToDisplay('3')"><span class="digit">3</span></button>
+            <button onclick="appendToDisplay('/')" class="operator-btn">/</button>
+            <button onclick="appendToDisplay('0')"><span class="digit">0</span></button>
+            <button onclick="appendToDisplay('.')"><span class="digit">.</span></button>
+            <button onclick="calculate()" class="equals-btn">=</button>
+            <button onclick="clearDisplay()" class="operator-btn clear-btn">C</button>
+        </div>
+
+        <div class="tail" aria-hidden="true"></div>
+        <p class="hint">~ meow ~</p>
+    </main>
+
+    <script src="index.js"></script>
+</body>
+</html>
