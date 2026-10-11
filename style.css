@@ -23,10 +23,6 @@ body{
      color: white;
      animation-duration: 0.2s; /* makes the animation quicker */
 }
-#displayText {
-    background: transparent; /* no black behind text */
-    display: inline-block;   /* needed for animation */
-}
 #keys{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -58,6 +54,6 @@ button:active {
 .operator-btn:hover{
     background-color: hsla(12, 100%, 35%, 0.678);
 }
-.operatior-btn:active{
+.operator-btn:active{
      background-color: hsla(29, 92%, 46%, 0.932);
 }
